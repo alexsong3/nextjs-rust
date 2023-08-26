@@ -17,6 +17,7 @@ export const WASMContextProvider: React.FC<WASMContextProviderProps> = ({
   useMountEffectOnce(() => {
     (async() => {
       const wasm = await import("wasm");
+      // console.log("1111", wasm)
       await wasm.default();
       setState({ wasm });
     })()
